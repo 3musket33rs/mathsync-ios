@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A34654E5C234B9FA4858874 /* libPods-mathsync-sdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AFFE14789F4FFABADD7F3B /* libPods-mathsync-sdkTests.a */; };
+		48034C0618B22E1200ADE6FE /* BucketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48034C0518B22E1200ADE6FE /* BucketTests.m */; };
 		481D83B118ACF1AA003924EF /* ResolverFromSummarizers.m in Sources */ = {isa = PBXBuildFile; fileRef = 481D83B018ACF1AA003924EF /* ResolverFromSummarizers.m */; };
 		481D83B618AD0BDD003924EF /* DeserializedDifference.m in Sources */ = {isa = PBXBuildFile; fileRef = 481D83B518AD0BDD003924EF /* DeserializedDifference.m */; };
 		481D83BA18AD19E5003924EF /* JSONEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 481D83B918AD19E5003924EF /* JSONEncoder.m */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		1C2172D5CCF74634BA802DCE /* Pods-mathsync-sdkTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mathsync-sdkTests.xcconfig"; path = "Pods/Pods-mathsync-sdkTests.xcconfig"; sourceTree = "<group>"; };
+		48034C0518B22E1200ADE6FE /* BucketTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BucketTests.m; sourceTree = "<group>"; };
 		481D83A818ACDAFB003924EF /* Resolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resolver.h; sourceTree = "<group>"; };
 		481D83A918ACDDEF003924EF /* Difference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Difference.h; sourceTree = "<group>"; };
 		481D83AA18ACF00D003924EF /* Serializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializer.h; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		48B53B0D18AADED4001899DA /* mathsync-sdkTests */ = {
 			isa = PBXGroup;
 			children = (
+				48034C0518B22E1200ADE6FE /* BucketTests.m */,
 				48B53B1318AADED4001899DA /* DeserializedDifferenceTests.m */,
 				48B53B0E18AADED4001899DA /* Supporting Files */,
 			);
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48B53B1418AADED4001899DA /* DeserializedDifferenceTests.m in Sources */,
+				48034C0618B22E1200ADE6FE /* BucketTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
