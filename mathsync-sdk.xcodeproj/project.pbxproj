@@ -15,6 +15,8 @@
 		481D83BD18AD1E90003924EF /* SummarizerFromItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 481D83BC18AD1E90003924EF /* SummarizerFromItems.m */; };
 		481D83C118AD201D003924EF /* InvertibleBlumFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 481D83C018AD201D003924EF /* InvertibleBlumFilter.m */; };
 		481D83C418AD65A2003924EF /* Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 481D83C318AD65A2003924EF /* Bucket.m */; };
+		4826EB3318B383F9008FD141 /* Sha1Digester.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3218B383F9008FD141 /* Sha1Digester.m */; };
+		4826EB3518B38EAA008FD141 /* Sha1DigesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3418B38EAA008FD141 /* Sha1DigesterTests.m */; };
 		48B53AF818AADED4001899DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53AF718AADED4001899DA /* Foundation.framework */; };
 		48B53AFD18AADED4001899DA /* mathsync_sdk.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48B53AFC18AADED4001899DA /* mathsync_sdk.h */; };
 		48B53AFF18AADED4001899DA /* mathsync_sdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B53AFE18AADED4001899DA /* mathsync_sdk.m */; };
@@ -70,6 +72,10 @@
 		481D83C018AD201D003924EF /* InvertibleBlumFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvertibleBlumFilter.m; sourceTree = "<group>"; };
 		481D83C218AD65A2003924EF /* Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bucket.h; sourceTree = "<group>"; };
 		481D83C318AD65A2003924EF /* Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bucket.m; sourceTree = "<group>"; };
+		4826EB3018B353D8008FD141 /* Digester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Digester.h; sourceTree = "<group>"; };
+		4826EB3118B383F9008FD141 /* Sha1Digester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sha1Digester.h; sourceTree = "<group>"; };
+		4826EB3218B383F9008FD141 /* Sha1Digester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sha1Digester.m; sourceTree = "<group>"; };
+		4826EB3418B38EAA008FD141 /* Sha1DigesterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sha1DigesterTests.m; sourceTree = "<group>"; };
 		48B53AF418AADED4001899DA /* libmathsync-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmathsync-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B53AF718AADED4001899DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		48B53AFB18AADED4001899DA /* mathsync-sdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mathsync-sdk-Prefix.pch"; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 		48B53B0F18AADED4001899DA /* mathsync-sdkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mathsync-sdkTests-Info.plist"; sourceTree = "<group>"; };
 		48B53B1118AADED4001899DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48B53B1318AADED4001899DA /* DeserializedDifferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeserializedDifferenceTests.m; sourceTree = "<group>"; };
+		48E70A2E18B344EF00C10CC9 /* BucketSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BucketSelector.h; sourceTree = "<group>"; };
 		F6AFFE14789F4FFABADD7F3B /* libPods-mathsync-sdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mathsync-sdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,8 +164,27 @@
 				481D83BC18AD1E90003924EF /* SummarizerFromItems.m */,
 				481D83BF18AD201D003924EF /* InvertibleBlumFilter.h */,
 				481D83C018AD201D003924EF /* InvertibleBlumFilter.m */,
+			);
+			name = impl;
+			sourceTree = "<group>";
+		};
+		4826EB2E18B34E58008FD141 /* bucket */ = {
+			isa = PBXGroup;
+			children = (
+				48E70A2E18B344EF00C10CC9 /* BucketSelector.h */,
+				4826EB2F18B34E70008FD141 /* impl */,
+				4826EB3018B353D8008FD141 /* Digester.h */,
+			);
+			name = bucket;
+			sourceTree = "<group>";
+		};
+		4826EB2F18B34E70008FD141 /* impl */ = {
+			isa = PBXGroup;
+			children = (
 				481D83C218AD65A2003924EF /* Bucket.h */,
 				481D83C318AD65A2003924EF /* Bucket.m */,
+				4826EB3118B383F9008FD141 /* Sha1Digester.h */,
+				4826EB3218B383F9008FD141 /* Sha1Digester.m */,
 			);
 			name = impl;
 			sourceTree = "<group>";
@@ -197,6 +223,7 @@
 		48B53AF918AADED4001899DA /* mathsync-sdk */ = {
 			isa = PBXGroup;
 			children = (
+				4826EB2E18B34E58008FD141 /* bucket */,
 				481D83AD18ACF0BB003924EF /* difference */,
 				481D83AC18ACF0A3003924EF /* summarize */,
 				481D83AE18ACF13B003924EF /* resolution */,
@@ -220,6 +247,7 @@
 			children = (
 				48034C0518B22E1200ADE6FE /* BucketTests.m */,
 				48B53B1318AADED4001899DA /* DeserializedDifferenceTests.m */,
+				4826EB3418B38EAA008FD141 /* Sha1DigesterTests.m */,
 				48B53B0E18AADED4001899DA /* Supporting Files */,
 			);
 			path = "mathsync-sdkTests";
@@ -355,6 +383,7 @@
 				481D83BD18AD1E90003924EF /* SummarizerFromItems.m in Sources */,
 				481D83BA18AD19E5003924EF /* JSONEncoder.m in Sources */,
 				48B53AFF18AADED4001899DA /* mathsync_sdk.m in Sources */,
+				4826EB3318B383F9008FD141 /* Sha1Digester.m in Sources */,
 				481D83C418AD65A2003924EF /* Bucket.m in Sources */,
 				481D83C118AD201D003924EF /* InvertibleBlumFilter.m in Sources */,
 			);
@@ -366,6 +395,7 @@
 			files = (
 				48B53B1418AADED4001899DA /* DeserializedDifferenceTests.m in Sources */,
 				48034C0618B22E1200ADE6FE /* BucketTests.m in Sources */,
+				4826EB3518B38EAA008FD141 /* Sha1DigesterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

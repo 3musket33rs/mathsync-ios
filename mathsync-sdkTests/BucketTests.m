@@ -59,8 +59,8 @@ describe(@"Bucket", ^{
             NSArray* array = [added1 toJSON];
             //[[array should] equal:@[@1, @"AQI=", @"AwQ="]];
             Bucket* bucket = [[Bucket alloc] initWithJSONArray:array];
-            [[[added1.xored description] should] equal:@"<0102>"];
-            [[[added1.hashed description] should] equal:@"<0304>"];
+            [[[bucket.xored description] should] equal:@"<0102>"];
+            [[[bucket.hashed description] should] equal:@"<0304>"];
         });
         
         it(@"group with 2 buckets should result in XOR operation", ^{
@@ -78,7 +78,7 @@ describe(@"Bucket", ^{
             Bucket* added3 = [empty modifyItemsNumber:@1 xored:content3 hashed:hash3];
             
             Bucket* result = [added1 group:added3];
-            [[[result.xored description] should] equal:@"<0404>"];
+            [[[result.xored description] should] equal:@"<000003>"];
         });
     });
 });
