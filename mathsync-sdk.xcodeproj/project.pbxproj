@@ -17,6 +17,8 @@
 		481D83C418AD65A2003924EF /* Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 481D83C318AD65A2003924EF /* Bucket.m */; };
 		4826EB3318B383F9008FD141 /* Sha1Digester.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3218B383F9008FD141 /* Sha1Digester.m */; };
 		4826EB3518B38EAA008FD141 /* Sha1DigesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3418B38EAA008FD141 /* Sha1DigesterTests.m */; };
+		4826EB3B18B3FB0C008FD141 /* PadAndHashBucketSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3A18B3FB0C008FD141 /* PadAndHashBucketSelector.m */; };
+		4826EB3D18B40906008FD141 /* PadAndHashBucketSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3C18B40906008FD141 /* PadAndHashBucketSelectorTests.m */; };
 		48B53AF818AADED4001899DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53AF718AADED4001899DA /* Foundation.framework */; };
 		48B53AFD18AADED4001899DA /* mathsync_sdk.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48B53AFC18AADED4001899DA /* mathsync_sdk.h */; };
 		48B53AFF18AADED4001899DA /* mathsync_sdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B53AFE18AADED4001899DA /* mathsync_sdk.m */; };
@@ -76,6 +78,9 @@
 		4826EB3118B383F9008FD141 /* Sha1Digester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sha1Digester.h; sourceTree = "<group>"; };
 		4826EB3218B383F9008FD141 /* Sha1Digester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sha1Digester.m; sourceTree = "<group>"; };
 		4826EB3418B38EAA008FD141 /* Sha1DigesterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sha1DigesterTests.m; sourceTree = "<group>"; };
+		4826EB3918B3FB0C008FD141 /* PadAndHashBucketSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadAndHashBucketSelector.h; sourceTree = "<group>"; };
+		4826EB3A18B3FB0C008FD141 /* PadAndHashBucketSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadAndHashBucketSelector.m; sourceTree = "<group>"; };
+		4826EB3C18B40906008FD141 /* PadAndHashBucketSelectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadAndHashBucketSelectorTests.m; sourceTree = "<group>"; };
 		48B53AF418AADED4001899DA /* libmathsync-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmathsync-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B53AF718AADED4001899DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		48B53AFB18AADED4001899DA /* mathsync-sdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mathsync-sdk-Prefix.pch"; sourceTree = "<group>"; };
@@ -129,8 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				481D83B718AD199B003924EF /* impl */,
-				481D83B418AD0BDD003924EF /* DeserializedDifference.h */,
-				481D83B518AD0BDD003924EF /* DeserializedDifference.m */,
 				481D83AB18ACF03D003924EF /* Deserializer.h */,
 				481D83AA18ACF00D003924EF /* Serializer.h */,
 				481D83A918ACDDEF003924EF /* Difference.h */,
@@ -151,6 +154,8 @@
 		481D83B718AD199B003924EF /* impl */ = {
 			isa = PBXGroup;
 			children = (
+				481D83B418AD0BDD003924EF /* DeserializedDifference.h */,
+				481D83B518AD0BDD003924EF /* DeserializedDifference.m */,
 				481D83B818AD19E5003924EF /* JSONEncoder.h */,
 				481D83B918AD19E5003924EF /* JSONEncoder.m */,
 			);
@@ -172,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				48E70A2E18B344EF00C10CC9 /* BucketSelector.h */,
-				4826EB2F18B34E70008FD141 /* impl */,
 				4826EB3018B353D8008FD141 /* Digester.h */,
+				4826EB2F18B34E70008FD141 /* impl */,
 			);
 			name = bucket;
 			sourceTree = "<group>";
@@ -181,6 +186,8 @@
 		4826EB2F18B34E70008FD141 /* impl */ = {
 			isa = PBXGroup;
 			children = (
+				4826EB3918B3FB0C008FD141 /* PadAndHashBucketSelector.h */,
+				4826EB3A18B3FB0C008FD141 /* PadAndHashBucketSelector.m */,
 				481D83C218AD65A2003924EF /* Bucket.h */,
 				481D83C318AD65A2003924EF /* Bucket.m */,
 				4826EB3118B383F9008FD141 /* Sha1Digester.h */,
@@ -248,6 +255,7 @@
 				48034C0518B22E1200ADE6FE /* BucketTests.m */,
 				48B53B1318AADED4001899DA /* DeserializedDifferenceTests.m */,
 				4826EB3418B38EAA008FD141 /* Sha1DigesterTests.m */,
+				4826EB3C18B40906008FD141 /* PadAndHashBucketSelectorTests.m */,
 				48B53B0E18AADED4001899DA /* Supporting Files */,
 			);
 			path = "mathsync-sdkTests";
@@ -379,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				481D83B118ACF1AA003924EF /* ResolverFromSummarizers.m in Sources */,
+				4826EB3B18B3FB0C008FD141 /* PadAndHashBucketSelector.m in Sources */,
 				481D83B618AD0BDD003924EF /* DeserializedDifference.m in Sources */,
 				481D83BD18AD1E90003924EF /* SummarizerFromItems.m in Sources */,
 				481D83BA18AD19E5003924EF /* JSONEncoder.m in Sources */,
@@ -393,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4826EB3D18B40906008FD141 /* PadAndHashBucketSelectorTests.m in Sources */,
 				48B53B1418AADED4001899DA /* DeserializedDifferenceTests.m in Sources */,
 				48034C0618B22E1200ADE6FE /* BucketTests.m in Sources */,
 				4826EB3518B38EAA008FD141 /* Sha1DigesterTests.m in Sources */,
