@@ -18,7 +18,8 @@
 		4826EB3518B38EAA008FD141 /* Sha1DigesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3418B38EAA008FD141 /* Sha1DigesterTests.m */; };
 		4826EB3B18B3FB0C008FD141 /* PadAndHashBucketSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3A18B3FB0C008FD141 /* PadAndHashBucketSelector.m */; };
 		4826EB3D18B40906008FD141 /* PadAndHashBucketSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EB3C18B40906008FD141 /* PadAndHashBucketSelectorTests.m */; };
-		4826EBCD18B534CE008FD141 /* InvertibleBlumFilterTests .m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EBCC18B534CE008FD141 /* InvertibleBlumFilterTests .m */; };
+		4826EBCD18B534CE008FD141 /* InvertibleBloomFilterTests .m in Sources */ = {isa = PBXBuildFile; fileRef = 4826EBCC18B534CE008FD141 /* InvertibleBloomFilterTests .m */; };
+		483DA09F18B64C60007BFFBF /* SerializedDifference.m in Sources */ = {isa = PBXBuildFile; fileRef = 483DA09E18B64C60007BFFBF /* SerializedDifference.m */; };
 		487A0FCE18B5E9D900D0EF76 /* InvertibleBloomFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A0FCD18B5E9D900D0EF76 /* InvertibleBloomFilter.m */; };
 		48B53AF818AADED4001899DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53AF718AADED4001899DA /* Foundation.framework */; };
 		48B53AFD18AADED4001899DA /* mathsync_sdk.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48B53AFC18AADED4001899DA /* mathsync_sdk.h */; };
@@ -80,7 +81,9 @@
 		4826EB3918B3FB0C008FD141 /* PadAndHashBucketSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadAndHashBucketSelector.h; sourceTree = "<group>"; };
 		4826EB3A18B3FB0C008FD141 /* PadAndHashBucketSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadAndHashBucketSelector.m; sourceTree = "<group>"; };
 		4826EB3C18B40906008FD141 /* PadAndHashBucketSelectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadAndHashBucketSelectorTests.m; sourceTree = "<group>"; };
-		4826EBCC18B534CE008FD141 /* InvertibleBlumFilterTests .m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "InvertibleBlumFilterTests .m"; sourceTree = "<group>"; };
+		4826EBCC18B534CE008FD141 /* InvertibleBloomFilterTests .m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "InvertibleBloomFilterTests .m"; sourceTree = "<group>"; };
+		483DA09D18B64C60007BFFBF /* SerializedDifference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerializedDifference.h; sourceTree = "<group>"; };
+		483DA09E18B64C60007BFFBF /* SerializedDifference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerializedDifference.m; sourceTree = "<group>"; };
 		487A0FCC18B5E9D900D0EF76 /* InvertibleBloomFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvertibleBloomFilter.h; sourceTree = "<group>"; };
 		487A0FCD18B5E9D900D0EF76 /* InvertibleBloomFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvertibleBloomFilter.m; sourceTree = "<group>"; };
 		48B53AF418AADED4001899DA /* libmathsync-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmathsync-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +163,8 @@
 				481D83B518AD0BDD003924EF /* DeserializedDifference.m */,
 				481D83B818AD19E5003924EF /* JSONEncoder.h */,
 				481D83B918AD19E5003924EF /* JSONEncoder.m */,
+				483DA09D18B64C60007BFFBF /* SerializedDifference.h */,
+				483DA09E18B64C60007BFFBF /* SerializedDifference.m */,
 			);
 			name = impl;
 			sourceTree = "<group>";
@@ -258,7 +263,7 @@
 				48B53B1318AADED4001899DA /* DeserializedDifferenceTests.m */,
 				4826EB3418B38EAA008FD141 /* Sha1DigesterTests.m */,
 				4826EB3C18B40906008FD141 /* PadAndHashBucketSelectorTests.m */,
-				4826EBCC18B534CE008FD141 /* InvertibleBlumFilterTests .m */,
+				4826EBCC18B534CE008FD141 /* InvertibleBloomFilterTests .m */,
 				48B53B0E18AADED4001899DA /* Supporting Files */,
 			);
 			path = "mathsync-sdkTests";
@@ -391,6 +396,7 @@
 			files = (
 				481D83B118ACF1AA003924EF /* ResolverFromSummarizers.m in Sources */,
 				4826EB3B18B3FB0C008FD141 /* PadAndHashBucketSelector.m in Sources */,
+				483DA09F18B64C60007BFFBF /* SerializedDifference.m in Sources */,
 				487A0FCE18B5E9D900D0EF76 /* InvertibleBloomFilter.m in Sources */,
 				481D83B618AD0BDD003924EF /* DeserializedDifference.m in Sources */,
 				481D83BD18AD1E90003924EF /* SummarizerFromItems.m in Sources */,
@@ -406,7 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4826EB3D18B40906008FD141 /* PadAndHashBucketSelectorTests.m in Sources */,
-				4826EBCD18B534CE008FD141 /* InvertibleBlumFilterTests .m in Sources */,
+				4826EBCD18B534CE008FD141 /* InvertibleBloomFilterTests .m in Sources */,
 				48B53B1418AADED4001899DA /* DeserializedDifferenceTests.m in Sources */,
 				48034C0618B22E1200ADE6FE /* BucketTests.m in Sources */,
 				4826EB3518B38EAA008FD141 /* Sha1DigesterTests.m in Sources */,

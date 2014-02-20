@@ -4,14 +4,14 @@
 #import "InvertibleBloomFilter.h"
 
 
-@interface InvertibleBlumFilterrTests : XCTestCase
+@interface InvertibleBloomFilterTests : XCTestCase
 
 @end
 
 
-SPEC_BEGIN(InvertibleBlumFilterSpec)
+SPEC_BEGIN(InvertibleBloomFilterSpec)
 
-describe(@"InvertibleBlumFilter", ^{
+describe(@"InvertibleBloomFilter", ^{
     context(@"gives a summary", ^{
         
         __block id digester;
@@ -66,6 +66,15 @@ describe(@"InvertibleBlumFilter", ^{
         it(@"when adding one item and substracting one item should give intial summary (xor is revertible)", ^{
             [[[just1 toJSON] should] equal:@"[[0,\"\",\"\"],[1,\"BQ==\",\"BA==\"],[0,\"\",\"\"],[1,\"BQ==\",\"BA==\"],[1,\"BQ==\",\"BA==\"]]"];
             [[[items1and2 toJSON] should] equal:@"[[0,\"\",\"\"],[1,\"BQ==\",\"BA==\"],[1,\"Bg==\",\"CA==\"],[2,\"Aw==\",\"DA==\"],[2,\"Aw==\",\"DA==\"]]"];
+        });
+        
+        it(@"", ^{
+            id<Difference> diff = [empty toDifference];
+            
+//            [diff added] is
+//            
+//            [[[just1 toJSON] should] equal:@"[[0,\"\",\"\"],[1,\"BQ==\",\"BA==\"],[0,\"\",\"\"],[1,\"BQ==\",\"BA==\"],[1,\"BQ==\",\"BA==\"]]"];
+//            [[[items1and2 toJSON] should] equal:@"[[0,\"\",\"\"],[1,\"BQ==\",\"BA==\"],[1,\"Bg==\",\"CA==\"],[2,\"Aw==\",\"DA==\"],[2,\"Aw==\",\"DA==\"]]"];
         });
     });
 });

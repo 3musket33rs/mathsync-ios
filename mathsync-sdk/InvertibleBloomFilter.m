@@ -1,5 +1,6 @@
 #import "InvertibleBloomFilter.h"
 #import "Difference.h"
+#import "SerializedDifference.h"
 #import "Bucket.h"
 
 @implementation InvertibleBloomFilter {
@@ -51,6 +52,7 @@
 }
 
 -(id<Summary>)minus:(id<Summary>)data {
+
     return nil;
 }
 
@@ -66,7 +68,36 @@
 }
 
 -(id<Difference>)toDifference {
-    return nil;
+    NSMutableArray* copy = [_buckets mutableCopy];
+    NSMutableSet* added = [NSMutableSet set];
+    NSMutableSet* removed = [NSMutableSet set];
+    BOOL found = YES;
+    while (found) {
+        found = NO;
+        for (Bucket* b in copy) {
+            NSNumber* items = b.itemsNumber;
+            if ([items isEqualToNumber:@1] || [items isEqualToNumber:@-1]) {
+               NSData* verified = [self verify:b];
+                if(verified != nil) {
+                    if ([items isEqualToNumber:@1]) {
+                        [added addObject:verified];
+                    } else if ([items isEqualToNumber:@-1]) {
+                        [removed addObject:verified];
+                    }
+                    [self modifyWithSideEffect:copy variation:[[NSNumber alloc] initWithInteger:-[items integerValue]] data:verified];
+                    found = YES;
+                }
+            }
+        }
+    }
+    
+    for (Bucket* b in copy) {
+        if(![b isEmpty]) {
+            return nil;
+        }
+    }
+    
+    return [[SerializedDifference alloc] initWithAdded:added removed:removed];
 }
 
 //-------------------------------------------
@@ -91,6 +122,23 @@
         buckets[i] = [[Bucket alloc] initWithJSONArray:deserialized[i]];
     }
     return buckets;
+}
+
+-(NSData*) verify:(Bucket*)bucket {
+    NSData* content = bucket.xored;
+    while (YES) {
+        if([[_digester digest:content] isEqualToData:bucket.hashed]) {
+            return content;
+        }
+        id bytes = [content bytes];
+        if([content length] > 0 && bytes[[content length]-1] == '\0') {
+            NSMutableData* newData = [content mutableCopy];
+            [newData resetBytesInRange:NSMakeRange([content length] - 1, 1)];
+            content = [newData copy];
+        } else {
+            return nil;
+        }
+    }
 }
 
 +(NSArray*)bucketsOfSize:(NSUInteger)size {
