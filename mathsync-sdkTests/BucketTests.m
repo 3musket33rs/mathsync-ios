@@ -68,6 +68,12 @@ describe(@"Bucket", ^{
             [[[result.xored description] should] equal:@"<0404>"];
         });
         
+        it(@"two XOR operations bring back original value", ^{
+            Bucket* result = [added1 group:added2];
+            result = [result group:added2];
+            [[[result.xored description] should] equal:@"<0102>"];
+        });
+        
         it(@"group with 2 buckets of different size should result in XOR operation", ^{
             NSMutableData* content3 = [NSMutableData data];
             char bytesToAppend3[3] = {0x01, 0x02, 0x03};

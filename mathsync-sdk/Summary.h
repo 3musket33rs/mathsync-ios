@@ -3,6 +3,7 @@
 
 @protocol Summary <NSObject>
 -(id<Summary>)plus:(NSData*)data;
+-(id<Summary>)plusAll:(NSArray*)items;
 -(id<Summary>)minus:(id<Summary>)data;
 -(NSString*)toJSON;
 -(id<Difference>)toDifference;
