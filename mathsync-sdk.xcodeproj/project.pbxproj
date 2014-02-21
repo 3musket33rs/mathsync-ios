@@ -30,6 +30,8 @@
 		48B53B0C18AADED4001899DA /* libmathsync-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53AF418AADED4001899DA /* libmathsync-sdk.a */; };
 		48B53B1218AADED4001899DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48B53B1018AADED4001899DA /* InfoPlist.strings */; };
 		48B53B1418AADED4001899DA /* DeserializedDifferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B53B1318AADED4001899DA /* DeserializedDifferenceTests.m */; };
+		48FCFB3318B8109B006C51BD /* SerializedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCFB3218B8109B006C51BD /* SerializedItems.m */; };
+		48FCFB3718B8157D006C51BD /* DefaultsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCFB3618B8157D006C51BD /* DefaultsConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,10 @@
 		48B53B1118AADED4001899DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48B53B1318AADED4001899DA /* DeserializedDifferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeserializedDifferenceTests.m; sourceTree = "<group>"; };
 		48E70A2E18B344EF00C10CC9 /* BucketSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BucketSelector.h; sourceTree = "<group>"; };
+		48FCFB3118B8109B006C51BD /* SerializedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerializedItems.h; sourceTree = "<group>"; };
+		48FCFB3218B8109B006C51BD /* SerializedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerializedItems.m; sourceTree = "<group>"; };
+		48FCFB3518B8157D006C51BD /* DefaultsConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultsConfiguration.h; sourceTree = "<group>"; };
+		48FCFB3618B8157D006C51BD /* DefaultsConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultsConfiguration.m; sourceTree = "<group>"; };
 		F6AFFE14789F4FFABADD7F3B /* libPods-mathsync-sdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mathsync-sdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,8 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				481D83B718AD199B003924EF /* impl */,
-				481D83AB18ACF03D003924EF /* Deserializer.h */,
-				481D83AA18ACF00D003924EF /* Serializer.h */,
 				481D83A918ACDDEF003924EF /* Difference.h */,
 			);
 			name = difference;
@@ -199,6 +203,8 @@
 				481D83C318AD65A2003924EF /* Bucket.m */,
 				4826EB3118B383F9008FD141 /* Sha1Digester.h */,
 				4826EB3218B383F9008FD141 /* Sha1Digester.m */,
+				48FCFB3518B8157D006C51BD /* DefaultsConfiguration.h */,
+				48FCFB3618B8157D006C51BD /* DefaultsConfiguration.m */,
 			);
 			name = impl;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 		48B53AF918AADED4001899DA /* mathsync-sdk */ = {
 			isa = PBXGroup;
 			children = (
+				48FCFB3018B81074006C51BD /* serialize */,
 				4826EB2E18B34E58008FD141 /* bucket */,
 				481D83AD18ACF0BB003924EF /* difference */,
 				481D83AC18ACF0A3003924EF /* summarize */,
@@ -276,6 +283,25 @@
 				48B53B1018AADED4001899DA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48FCFB3018B81074006C51BD /* serialize */ = {
+			isa = PBXGroup;
+			children = (
+				48FCFB3418B813EF006C51BD /* impl */,
+				481D83AB18ACF03D003924EF /* Deserializer.h */,
+				481D83AA18ACF00D003924EF /* Serializer.h */,
+			);
+			name = serialize;
+			sourceTree = "<group>";
+		};
+		48FCFB3418B813EF006C51BD /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				48FCFB3118B8109B006C51BD /* SerializedItems.h */,
+				48FCFB3218B8109B006C51BD /* SerializedItems.m */,
+			);
+			name = impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,10 +421,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				481D83B118ACF1AA003924EF /* ResolverFromSummarizers.m in Sources */,
+				48FCFB3318B8109B006C51BD /* SerializedItems.m in Sources */,
 				4826EB3B18B3FB0C008FD141 /* PadAndHashBucketSelector.m in Sources */,
 				483DA09F18B64C60007BFFBF /* SerializedDifference.m in Sources */,
 				487A0FCE18B5E9D900D0EF76 /* InvertibleBloomFilter.m in Sources */,
 				481D83B618AD0BDD003924EF /* DeserializedDifference.m in Sources */,
+				48FCFB3718B8157D006C51BD /* DefaultsConfiguration.m in Sources */,
 				481D83BD18AD1E90003924EF /* SummarizerFromItems.m in Sources */,
 				481D83BA18AD19E5003924EF /* JSONEncoder.m in Sources */,
 				48B53AFF18AADED4001899DA /* mathsync_sdk.m in Sources */,

@@ -4,7 +4,6 @@
 #import "Bucket.h"
 
 @implementation InvertibleBloomFilter {
-    NSArray* _buckets;
     id<BucketSelector> _bucketSelector;
     id<Digester> _digester;
 }
@@ -51,9 +50,43 @@
     return [[InvertibleBloomFilter alloc] initWithBucket:updated digester:_digester bucketSelector:_bucketSelector];
 }
 
--(id<Summary>)minus:(id<Summary>)data {
+-(id<Summary>)minus:(id<Summary>)other {
+    if (other == nil) {
+        @throw [NSException
+                exceptionWithName:@"IllegalArugument"
+                reason:@"Cannot substract a null IBF"
+                userInfo:nil];
+    }
+    InvertibleBloomFilter* otherSum =(InvertibleBloomFilter*)other;
+    if ([_buckets count] != [otherSum->_buckets count]) {
+        @throw [NSException
+                exceptionWithName:@"IllegalArugument"
+                reason:[NSString stringWithFormat:@"Cannot substract IBFs of different sizes, tried to substract %@ from %@", otherSum, self]
+                userInfo:nil];
+    }
+    
+    NSMutableArray* updated = [NSMutableArray array];
+    for (int i = 0; i < [_buckets count]; i++) {
+        Bucket* otherBucket = otherSum->_buckets[i];
+        updated[i] = [_buckets[i] modifyItemsNumber:[[NSNumber alloc] initWithInteger:(-1 * [otherBucket.itemsNumber integerValue])] xored:otherBucket.xored hashed:otherBucket.hashed];
+    }
+    return [[InvertibleBloomFilter alloc] initWithBucket:updated digester:_digester bucketSelector:_bucketSelector];
+//TODO: why do we test for instanceod???
+//    id<Summary> result;
+//    if (other instanceof Ibf) {
+//        result = modifyWithIbf(-1, (Ibf)other);
+//    } else {
+//        Difference<byte[]> asDifference = other.toDifference();
+//        if (asDifference == null) {
+//            throw new IllegalArgumentException("Summary cannot be viewed as a difference, it is likely the root cause is using an incompatible summary type");
+//        }
+//        
+//        Bucket[] updated = copyBuckets();
+//        modifyManyWithSideEffect(updated, 1, asDifference.added().iterator());
+//        modifyManyWithSideEffect(updated, -1, asDifference.removed().iterator());
+//        result = new Ibf(updated, digester, selector);
+//    }
 
-    return nil;
 }
 
 -(NSString*)toJSON {
@@ -77,7 +110,7 @@
         for (Bucket* b in copy) {
             NSNumber* items = b.itemsNumber;
             if ([items isEqualToNumber:@1] || [items isEqualToNumber:@-1]) {
-               NSData* verified = [self verify:b];
+               NSData* verified = [self trimAndVerify:b];
                 if(verified != nil) {
                     if ([items isEqualToNumber:@1]) {
                         [added addObject:verified];
@@ -86,6 +119,7 @@
                     }
                     [self modifyWithSideEffect:copy variation:[[NSNumber alloc] initWithInteger:-[items integerValue]] data:verified];
                     found = YES;
+                    break;
                 }
             }
         }
@@ -124,17 +158,17 @@
     return buckets;
 }
 
--(NSData*) verify:(Bucket*)bucket {
+-(NSData*) trimAndVerify:(Bucket*)bucket {
     NSData* content = bucket.xored;
     while (YES) {
+        //NSData* temp =[_digester digest:content] ;
         if([[_digester digest:content] isEqualToData:bucket.hashed]) {
             return content;
         }
-        id bytes = [content bytes];
+        char* bytes = (char*)[content bytes];
         if([content length] > 0 && bytes[[content length]-1] == '\0') {
             NSMutableData* newData = [content mutableCopy];
-            [newData resetBytesInRange:NSMakeRange([content length] - 1, 1)];
-            content = [newData copy];
+            content = [newData subdataWithRange:NSMakeRange(0, newData.length -1)];
         } else {
             return nil;
         }
@@ -157,6 +191,7 @@
 
 -(void)modifyWithSideEffect:(NSMutableArray*)buckets variation:(NSNumber*)variation data:(NSData*)data {
     NSData* hashed = [_digester digest:data];
+    //NSArray* temp = [_bucketSelector selectBuckets:data];
     for(NSNumber* number in [_bucketSelector selectBuckets:data]) {
         int value = [number intValue] % [buckets count];
         buckets[value] = [(Bucket*)buckets[value] modifyItemsNumber:variation xored:data hashed:hashed];

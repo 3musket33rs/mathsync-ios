@@ -24,7 +24,7 @@
     char* ptr = (char*)self.hashed.bytes;
     for (int i = 0; i < [self.hashed length]; i++) {
         if (*ptr != 0) {
-            return false;
+            return NO;
         }
         ptr++;
     }
@@ -83,7 +83,8 @@
     NSMutableData* xored = ([item1 length] > [item2 length] ? [item1 mutableCopy] : [item2 mutableCopy]);
     char* ptr = (char*)xored.bytes;
     char* itemPtr = (char*)([item1 length] <= [item2 length] ? item1.bytes : item2.bytes);
-    for (int i = 0; i < [item1 length]; i++) {
+    int minSize = ([item1 length] <= [item2 length] ? [item1 length] : [item2 length]);
+    for (int i = 0; i < minSize; i++) {
         *ptr = 0xff & (*ptr ^ *itemPtr);
         ptr++;
         itemPtr++;
@@ -92,7 +93,7 @@
 }
 
 -(id)description {
-   return [NSString stringWithFormat:@"Bucket holding %@ items, hashed=%@, xored=%@", self.itemsNumber, self.xored, self.hashed ];
+   return [NSString stringWithFormat:@"Bucket holding %@ items, hashed=%@, xored=%@", self.itemsNumber, self.hashed, self.xored ];
 }
 
 @end
