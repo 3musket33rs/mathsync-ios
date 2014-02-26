@@ -30,6 +30,7 @@
 		48B53B0C18AADED4001899DA /* libmathsync-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53AF418AADED4001899DA /* libmathsync-sdk.a */; };
 		48B53B1218AADED4001899DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48B53B1018AADED4001899DA /* InfoPlist.strings */; };
 		48B53B1418AADED4001899DA /* MKDeserializedDifferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B53B1318AADED4001899DA /* MKDeserializedDifferenceTests.m */; };
+		48D70B3518BEA34100FE4BAF /* MKSummarizerFromJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D70B3418BEA34100FE4BAF /* MKSummarizerFromJson.m */; };
 		48FCFB3318B8109B006C51BD /* MKSerializedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCFB3218B8109B006C51BD /* MKSerializedItems.m */; };
 		48FCFB3718B8157D006C51BD /* MKDefaultsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCFB3618B8157D006C51BD /* MKDefaultsConfiguration.m */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,8 @@
 		48B53B0F18AADED4001899DA /* mathsync-sdkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mathsync-sdkTests-Info.plist"; sourceTree = "<group>"; };
 		48B53B1118AADED4001899DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48B53B1318AADED4001899DA /* MKDeserializedDifferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKDeserializedDifferenceTests.m; sourceTree = "<group>"; };
+		48D70B3318BEA34100FE4BAF /* MKSummarizerFromJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSummarizerFromJson.h; sourceTree = "<group>"; };
+		48D70B3418BEA34100FE4BAF /* MKSummarizerFromJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSummarizerFromJson.m; sourceTree = "<group>"; };
 		48E70A2E18B344EF00C10CC9 /* MKBucketSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKBucketSelector.h; sourceTree = "<group>"; };
 		48FCFB3118B8109B006C51BD /* MKSerializedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSerializedItems.h; sourceTree = "<group>"; };
 		48FCFB3218B8109B006C51BD /* MKSerializedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerializedItems.m; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 			children = (
 				487A0FCC18B5E9D900D0EF76 /* MKInvertibleBloomFilter.h */,
 				487A0FCD18B5E9D900D0EF76 /* MKInvertibleBloomFilter.m */,
+				48D70B3318BEA34100FE4BAF /* MKSummarizerFromJson.h */,
+				48D70B3418BEA34100FE4BAF /* MKSummarizerFromJson.m */,
 				481D83BB18AD1E90003924EF /* MKSummarizerFromItems.h */,
 				481D83BC18AD1E90003924EF /* MKSummarizerFromItems.m */,
 			);
@@ -431,6 +436,7 @@
 				481D83BA18AD19E5003924EF /* MKJSONEncoder.m in Sources */,
 				48B53AFF18AADED4001899DA /* mathsync_sdk.m in Sources */,
 				4826EB3318B383F9008FD141 /* MKSha1Digester.m in Sources */,
+				48D70B3518BEA34100FE4BAF /* MKSummarizerFromJson.m in Sources */,
 				481D83C418AD65A2003924EF /* MKBucket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
