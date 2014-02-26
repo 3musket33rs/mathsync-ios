@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/3musket33rs/mathsync-ios.git' }
   s.platform     = :ios, 7.0
   s.source_files = 'mathsync-sdk/**/*.{h,m}'
-  s.public_header_files = 'mathsync-sdk/MKMathSyncSdk.h
+  s.public_header_files = 'mathsync-sdk/MKMathSyncSdk.h'
   s.requires_arc = true
 end
