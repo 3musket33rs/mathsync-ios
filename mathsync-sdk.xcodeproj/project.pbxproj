@@ -22,8 +22,6 @@
 		483DA09F18B64C60007BFFBF /* MKSerializedDifference.m in Sources */ = {isa = PBXBuildFile; fileRef = 483DA09E18B64C60007BFFBF /* MKSerializedDifference.m */; };
 		487A0FCE18B5E9D900D0EF76 /* MKInvertibleBloomFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A0FCD18B5E9D900D0EF76 /* MKInvertibleBloomFilter.m */; };
 		48B53AF818AADED4001899DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53AF718AADED4001899DA /* Foundation.framework */; };
-		48B53AFD18AADED4001899DA /* mathsync_sdk.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48B53AFC18AADED4001899DA /* mathsync_sdk.h */; };
-		48B53AFF18AADED4001899DA /* mathsync_sdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B53AFE18AADED4001899DA /* mathsync_sdk.m */; };
 		48B53B0618AADED4001899DA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53B0518AADED4001899DA /* XCTest.framework */; };
 		48B53B0718AADED4001899DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53AF718AADED4001899DA /* Foundation.framework */; };
 		48B53B0918AADED4001899DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B53B0818AADED4001899DA /* UIKit.framework */; };
@@ -52,7 +50,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				48B53AFD18AADED4001899DA /* mathsync_sdk.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +89,6 @@
 		48B53AF418AADED4001899DA /* libmathsync-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmathsync-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B53AF718AADED4001899DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		48B53AFB18AADED4001899DA /* mathsync-sdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mathsync-sdk-Prefix.pch"; sourceTree = "<group>"; };
-		48B53AFC18AADED4001899DA /* mathsync_sdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mathsync_sdk.h; sourceTree = "<group>"; };
-		48B53AFE18AADED4001899DA /* mathsync_sdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mathsync_sdk.m; sourceTree = "<group>"; };
 		48B53B0418AADED4001899DA /* mathsync-sdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mathsync-sdkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B53B0518AADED4001899DA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		48B53B0818AADED4001899DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -263,8 +258,6 @@
 		48B53AFA18AADED4001899DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				48B53AFC18AADED4001899DA /* mathsync_sdk.h */,
-				48B53AFE18AADED4001899DA /* mathsync_sdk.m */,
 				48B53AFB18AADED4001899DA /* mathsync-sdk-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -436,7 +429,6 @@
 				48FCFB3718B8157D006C51BD /* MKDefaultsConfiguration.m in Sources */,
 				481D83BD18AD1E90003924EF /* MKSummarizerFromItems.m in Sources */,
 				481D83BA18AD19E5003924EF /* MKJSONEncoder.m in Sources */,
-				48B53AFF18AADED4001899DA /* mathsync_sdk.m in Sources */,
 				4826EB3318B383F9008FD141 /* MKSha1Digester.m in Sources */,
 				48D70B3518BEA34100FE4BAF /* MKSummarizerFromJson.m in Sources */,
 				481D83C418AD65A2003924EF /* MKBucket.m in Sources */,
