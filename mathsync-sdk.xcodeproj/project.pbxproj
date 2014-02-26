@@ -102,6 +102,7 @@
 		48B53B1318AADED4001899DA /* MKDeserializedDifferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKDeserializedDifferenceTests.m; sourceTree = "<group>"; };
 		48D70B3318BEA34100FE4BAF /* MKSummarizerFromJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSummarizerFromJson.h; sourceTree = "<group>"; };
 		48D70B3418BEA34100FE4BAF /* MKSummarizerFromJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSummarizerFromJson.m; sourceTree = "<group>"; };
+		48D70B3618BEAF9A00FE4BAF /* MKMathSyncSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMathSyncSdk.h; sourceTree = "<group>"; };
 		48E70A2E18B344EF00C10CC9 /* MKBucketSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKBucketSelector.h; sourceTree = "<group>"; };
 		48FCFB3118B8109B006C51BD /* MKSerializedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSerializedItems.h; sourceTree = "<group>"; };
 		48FCFB3218B8109B006C51BD /* MKSerializedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerializedItems.m; sourceTree = "<group>"; };
@@ -254,6 +255,7 @@
 				481D83AC18ACF0A3003924EF /* summarize */,
 				481D83AE18ACF13B003924EF /* resolution */,
 				48B53AFA18AADED4001899DA /* Supporting Files */,
+				48D70B3618BEAF9A00FE4BAF /* MKMathSyncSdk.h */,
 			);
 			path = "mathsync-sdk";
 			sourceTree = "<group>";
