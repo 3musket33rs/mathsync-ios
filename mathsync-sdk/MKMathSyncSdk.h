@@ -11,6 +11,8 @@
 #import "MKResolverFromSummarizers.h"
 #import "MKSummary.h"
 #import "MKDifference.h"
+#import "MKDigester.h"
+#import "MKBucketSelector.h"
 
 #endif /* _MATH_SYNC_ */
 

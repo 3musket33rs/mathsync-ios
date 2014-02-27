@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/3musket33rs/mathsync-ios.git' }
   s.platform     = :ios, 7.0
   s.source_files = 'mathsync-sdk/**/*.{h,m}'
-  s.public_header_files = 'mathsync-sdk/MKMathSyncSdk.h', 'mathsync-sdk/MKSerializer.h', 'mathsync-sdk/MKDeserializer.h', 'mathsync-sdk/MKSummarizer.h', 'mathsync-sdk/MKSummarizerFromItems.h', 'mathsync-sdk/MKSummarizerFromJson.h', 'mathsync-sdk/MKResolver.h', 'mathsync-sdk/MKResolverFromSummarizers.h', 'mathsync-sdk/MKSummary.h', 'mathsync-sdk/MKDifference.h'
+  s.public_header_files = 'mathsync-sdk/MKMathSyncSdk.h', 'mathsync-sdk/MKSerializer.h', 'mathsync-sdk/MKDeserializer.h', 'mathsync-sdk/MKSummarizer.h', 'mathsync-sdk/MKSummarizerFromItems.h', 'mathsync-sdk/MKSummarizerFromJson.h', 'mathsync-sdk/MKResolver.h', 'mathsync-sdk/MKResolverFromSummarizers.h', 'mathsync-sdk/MKSummary.h', 'mathsync-sdk/MKDifference.h', 'mathsync-sdk/MKDigester.h' , 'mathsync-sdk/MKBucketSelector.h'
   s.requires_arc = true
 end
