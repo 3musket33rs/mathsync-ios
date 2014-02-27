@@ -10,7 +10,7 @@
 #import "MKResolver.h"
 #import "MKResolverFromSummarizers.h"
 #import "MKSummary.h"
-
+#import "MKDifference.h"
 
 #endif /* _MATH_SYNC_ */
 
