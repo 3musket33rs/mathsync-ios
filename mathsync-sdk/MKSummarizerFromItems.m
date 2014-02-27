@@ -15,7 +15,7 @@
     return [[MKSummarizerFromItems alloc] initWithItems:serializedItems digester:digester bucketSelector:bucketSelector];
 }
 
-+(id)simpleSummarizerWithItem:(NSArray*)items serializer:(id<MKSerializer>)serializer digester:(id<MKDigester>)digester bucketSelector:(id<MKBucketSelector>)bucketSelector {
++(id)simpleSummarizerWithItem:(NSArray*)items serializer:(id<MKSerializer>)serializer {
     return [self customSummarizerWithItem:items serializer:serializer digester:[MKSha1Digester sharedSha1Digester] bucketSelector:[MKDefaultsConfiguration defaultSelector]];
 }
 
