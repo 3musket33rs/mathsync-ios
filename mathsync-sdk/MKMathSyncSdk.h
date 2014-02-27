@@ -9,6 +9,7 @@
 #import "MKSummarizerFromJson.h"
 #import "MKResolver.h"
 #import "MKResolverFromSummarizers.h"
+#import "MKSummary.h"
 
 
 #endif /* _MATH_SYNC_ */
