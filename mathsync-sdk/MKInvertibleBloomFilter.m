@@ -38,7 +38,7 @@
     return [[MKInvertibleBloomFilter alloc] initWithBucket:updated digester:_digester bucketSelector:_bucketSelector];
 }
 
--(id<MKSummary>)plusAll:(NSArray*)items {
+-(id<MKSummary>)plusAll:(NSEnumerator*)items {
     if (items == nil) {
         @throw [NSException
                 exceptionWithName:@"IllegalArugument"
@@ -198,7 +198,7 @@
     }
 }
 
--(void)modifyManyWithSideEffect:(NSMutableArray*)buckets variation:(NSNumber*)variation data:(NSArray*)arrayOfData {
+-(void)modifyManyWithSideEffect:(NSMutableArray*)buckets variation:(NSNumber*)variation data:(NSEnumerator*)arrayOfData {
     for (NSData* data in arrayOfData) {
         [self modifyWithSideEffect:buckets variation:variation data:data];
     }

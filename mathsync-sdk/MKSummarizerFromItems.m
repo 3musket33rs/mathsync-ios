@@ -5,7 +5,7 @@
 #import "MKInvertibleBloomFilter.h"
 
 @implementation MKSummarizerFromItems {
-    NSArray* _items;
+    MKSerializedItems* _items;
     id<MKDigester> _digester;
     id<MKBucketSelector> _selector;
 }
@@ -32,6 +32,7 @@
     if (self = [super init]) {
         _digester = digester;
         _selector = selector;
+        _items = items;
     }
     return self;
 }

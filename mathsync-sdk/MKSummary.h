@@ -3,7 +3,7 @@
 
 @protocol MKSummary <NSObject>
 -(id<MKSummary>)plus:(NSData*)data;
--(id<MKSummary>)plusAll:(NSArray*)items;
+-(id<MKSummary>)plusAll:(NSEnumerator*)items;
 -(id<MKSummary>)minus:(id<MKSummary>)data;
 -(NSString*)toJSON;
 -(id<MKDifference>)toDifference;
