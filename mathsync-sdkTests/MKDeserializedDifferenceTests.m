@@ -11,7 +11,7 @@
 
 SPEC_BEGIN(DeserializedDifferenceSpec)
 
-describe(@"ADeserializedDifference", ^{
+describe(@"MKDeserializedDifference", ^{
     context(@"when newly created", ^{
         
         __block MKDeserializedDifference *difference = nil;

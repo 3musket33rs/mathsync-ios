@@ -9,9 +9,9 @@
 @end
 
 
-SPEC_BEGIN(BucketSpec)
+SPEC_BEGIN(MKBucketSpec)
 
-describe(@"Bucket", ^{
+describe(@"MKBucket", ^{
     context(@"when doing operation", ^{
         
         

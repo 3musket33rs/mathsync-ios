@@ -9,9 +9,9 @@
 @end
 
 
-SPEC_BEGIN(PadAndHashBucketSelectorSpec)
+SPEC_BEGIN(MKPadAndHashBucketSelectorSpec)
 
-describe(@"PadAndHashBucketSelector", ^{
+describe(@"MKPadAndHashBucketSelector", ^{
     context(@"gives list of different hashes", ^{
         
         

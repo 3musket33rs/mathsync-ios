@@ -9,8 +9,7 @@
     if(self = [super init]) {
         _items = items;
         _serializer = serializer;
-    }
-    
+    }    
     return self;
 }
 
@@ -18,4 +17,7 @@
     return [_serializer serialize:[[_items objectEnumerator] nextObject]];
 }
 
+-(NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
+    return [_items countByEnumeratingWithState:state objects:buffer count:len];
+}
 @end

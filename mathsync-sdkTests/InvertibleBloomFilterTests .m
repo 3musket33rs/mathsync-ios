@@ -9,9 +9,9 @@
 @end
 
 
-SPEC_BEGIN(InvertibleBloomFilterSpec)
+SPEC_BEGIN(MKInvertibleBloomFilterSpec)
 
-describe(@"InvertibleBloomFilter", ^{
+describe(@"MKInvertibleBloomFilter", ^{
     context(@"gives a summary", ^{
         
         __block id digester;

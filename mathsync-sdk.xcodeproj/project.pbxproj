@@ -29,6 +29,7 @@
 		48B53B1218AADED4001899DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48B53B1018AADED4001899DA /* InfoPlist.strings */; };
 		48B53B1418AADED4001899DA /* MKDeserializedDifferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B53B1318AADED4001899DA /* MKDeserializedDifferenceTests.m */; };
 		48D70B3518BEA34100FE4BAF /* MKSummarizerFromJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D70B3418BEA34100FE4BAF /* MKSummarizerFromJson.m */; };
+		48D70B4618BF739F00FE4BAF /* MKSerializedItemsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D70B4518BF739F00FE4BAF /* MKSerializedItemsTests.m */; };
 		48FCFB3318B8109B006C51BD /* MKSerializedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCFB3218B8109B006C51BD /* MKSerializedItems.m */; };
 		48FCFB3718B8157D006C51BD /* MKDefaultsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCFB3618B8157D006C51BD /* MKDefaultsConfiguration.m */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		48D70B3318BEA34100FE4BAF /* MKSummarizerFromJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSummarizerFromJson.h; sourceTree = "<group>"; };
 		48D70B3418BEA34100FE4BAF /* MKSummarizerFromJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSummarizerFromJson.m; sourceTree = "<group>"; };
 		48D70B3618BEAF9A00FE4BAF /* MKMathSyncSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMathSyncSdk.h; sourceTree = "<group>"; };
+		48D70B4518BF739F00FE4BAF /* MKSerializedItemsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerializedItemsTests.m; sourceTree = "<group>"; };
 		48E70A2E18B344EF00C10CC9 /* MKBucketSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKBucketSelector.h; sourceTree = "<group>"; };
 		48FCFB3118B8109B006C51BD /* MKSerializedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSerializedItems.h; sourceTree = "<group>"; };
 		48FCFB3218B8109B006C51BD /* MKSerializedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerializedItems.m; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				48034C0518B22E1200ADE6FE /* MKBucketTests.m */,
+				48D70B4518BF739F00FE4BAF /* MKSerializedItemsTests.m */,
 				48B53B1318AADED4001899DA /* MKDeserializedDifferenceTests.m */,
 				4826EB3418B38EAA008FD141 /* MKSha1DigesterTests.m */,
 				4826EB3C18B40906008FD141 /* MKPadAndHashBucketSelectorTests.m */,
@@ -439,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D70B4618BF739F00FE4BAF /* MKSerializedItemsTests.m in Sources */,
 				4826EB3D18B40906008FD141 /* MKPadAndHashBucketSelectorTests.m in Sources */,
 				4826EBCD18B534CE008FD141 /* InvertibleBloomFilterTests .m in Sources */,
 				48B53B1418AADED4001899DA /* MKDeserializedDifferenceTests.m in Sources */,

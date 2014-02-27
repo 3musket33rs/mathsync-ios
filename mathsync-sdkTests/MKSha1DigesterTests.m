@@ -9,9 +9,9 @@
 @end
 
 
-SPEC_BEGIN(Sha1DigesterSpec)
+SPEC_BEGIN(MKSha1DigesterSpec)
 
-describe(@"Sha1Digester", ^{
+describe(@"MKSha1Digester", ^{
     context(@"gives hash with", ^{
         
         
