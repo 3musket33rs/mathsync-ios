@@ -199,8 +199,9 @@
 }
 
 -(void)modifyManyWithSideEffect:(NSMutableArray*)buckets variation:(NSNumber*)variation data:(NSEnumerator*)arrayOfData {
-    for (NSData* data in arrayOfData) {
-        [self modifyWithSideEffect:buckets variation:variation data:data];
+    
+    for (int i = 0; i < [[arrayOfData allObjects] count]; i++) {
+        [self modifyWithSideEffect:buckets variation:variation data:[arrayOfData nextObject]];
     }
 }
 
